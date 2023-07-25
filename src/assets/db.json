@@ -1,0 +1,16 @@
+{
+  "articles": [
+    {
+      "author": "From Scratch",
+      "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae.",
+      "date": 1621530288602,
+      "id": 1
+    },
+    {
+      "author": "ZS",
+      "content": "Helle, wiec jestem  na mecie i ja przekroczylam i wygralam. Jestem z siebie bardzo dumna! Gratuluje sobie. To wsanialy dzien. Zycze sobie wiele szcziescia w szyszlosci....\nHelle, wiec jestem  na mecie i ja przekroczylam i wygralam. Jestem z siebie bardzo dumna! Gratuluje sobie. To wsanialy dzien. Zycze sobie wiele szcziescia w szyszlosci....",
+      "date": 1690207135629,
+      "id": 2
+    }
+  ]
+}

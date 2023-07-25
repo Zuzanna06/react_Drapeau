@@ -1,0 +1,1102 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>🎥 Cours React [2/2]</title>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="X1wEEfhpehgWgl1bMacHqe--E7y0UsD_CWMmhhr0tKvCCgYCfq5AHtYpbUUsBlsRsW4Vb5ZOYL-u_nWvOzsvgQ" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<meta name="action-cable-url" content="wss://fromscratch.podia.com/cable" data-messaging-enabled="true" />
+<link rel="icon" type="image/x-icon" href="https://d31ezp3r8jwmks.cloudfront.net/5y0otveb8h52e77q3ndd0p16x677" />
+
+
+<meta property="og:site_name" content="From Scratch - Développement Web">
+
+
+  <meta name="description" content="Devenir développeur Front-end en partant de zéro. HTML, CSS, JS, REACT 🚀" />
+  <meta property="og:description" content="Devenir développeur Front-end en partant de zéro. HTML, CSS, JS, REACT 🚀">
+
+
+  <meta property="og:title" content="From Scratch - Développement Web">
+
+  <meta name='twitter:card' content= 'summary_large_image'>
+  <meta name="twitter:description" content="Devenir développeur Front-end en partant de zéro. HTML, CSS, JS, REACT 🚀">
+  <meta name="twitter:title" content="From Scratch - Développement Web">
+
+
+
+  
+
+  <meta name="analytics-user-id" content="21594535">
+
+  <meta name="google-analytics-id" content="G-TGRP1J9Q0C">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TGRP1J9Q0C"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <!-- End Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+<script src="https://js.stripe.com/v3/"></script>
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script src="//fast.wistia.com/assets/external/E-v1.js"></script>
+
+<script src='https://www.google.com/recaptcha/api.js?onload=onloadRecaptchaCallback&render=explicit' async defer></script>
+
+
+
+<script>
+  var STOREFRONT_PROPS = {"colors":{"brand":"#aaffff","background":"#181717","heading":"#0d161b","text":"#0d161b","button":"#aaffff","buttonText":"#0e0e0e"}}
+</script>
+
+
+    <div>
+</div>
+    <style id="custom-storefront-styles">.messaging-header{background-color:#aff;color:#0e0e0e;fill:#0e0e0e}.conversation-bubble-background{background:#aff}.unread .conversation-bubble-background svg{fill:#aff}.conversation-bubble-icon{fill:#0e0e0e}.conversation-bubble{position:fixed;width:56px;height:56px;bottom:20px;right:20px;cursor:pointer;z-index:101}.conversation-bubble-background{position:relative;z-index:103;width:56px;height:56px;border-radius:50%}.conversation-bubble-background svg{display:none}.conversation-bubble-shadow{position:absolute;z-index:102;top:-8px;left:-16px;width:88px;height:88px;background-size:88px 88px}.conversation-bubble-icon{position:absolute;top:12px;left:12px;width:32px;height:32px;z-index:111}.conversation-dismiss-icon{fill:#0e0e0e}.conversation-dismiss-icon path{stroke:#0e0e0e}.unread .conversation-bubble-background{background:none}.unread .conversation-bubble-background svg{display:block;width:56px;height:56px}.unread:after{position:absolute;z-index:103;left:43px;top:3px;width:10px;height:10px;content:"";background:#E24646;border-radius:50%}.messaging-chat-window{width:380px;height:480px;position:fixed;right:20px;bottom:100px;box-sizing:border-box;box-shadow:0 0 0 1px rgba(0,0,0,0.15),0px 7px 40px 2px rgba(148,149,150,0.3);background:white;display:flex;flex-direction:column;justify-content:space-between;transition:0.3s ease-in-out;border-radius:12px;z-index:112}@media screen and (max-width: 420px),screen and (max-height: 590px){.messaging-chat-window{width:100%;height:100%;top:0;bottom:0;right:0;border-radius:0;z-index:1143}}.messaging-message-list{height:344px;min-height:200px;overflow-y:scroll;background-color:white;background-size:100%;overflow:hidden;position:relative;z-index:113}.messaging-message-list ::-webkit-scrollbar{display:none}@media screen and (max-width: 420px),screen and (max-height: 590px){.messaging-message-list{overflow-x:hidden;height:100%}}.messaging-header{height:100%;max-height:70px;border-top-left-radius:12px;border-top-right-radius:12px;padding:16px;position:relative;box-sizing:border-box;display:flex;align-items:center;z-index:114;-webkit-box-shadow:0px 2px 4px rgba(41,37,51,0.1);box-shadow:0px 2px 4px rgba(41,37,51,0.1)}@media screen and (max-width: 420px),screen and (max-height: 590px){.messaging-header{border-top-left-radius:0;border-top-right-radius:0}}.messaging-header--img{border-radius:50%}.messaging-header--user{display:grid;width:100%}.messaging-header--user-name{border-radius:5px;font-size:16px;font-weight:bold;line-height:20px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.messaging-header--user-status{align-self:center;border-radius:5px;font-size:14px;line-height:1}.messaging-header--dismiss{align-self:center;display:none}@media screen and (max-width: 420px),screen and (max-height: 590px){.messaging-header--dismiss{display:block}}.messaging-user-input--container{display:flex;align-items:flex-start;-webkit-box-shadow:0px -2px 4px rgba(41,37,51,0.1);box-shadow:0px -2px 4px rgba(41,37,51,0.1);z-index:114}.messaging-user-input--text{width:100%;line-height:1.5em;resize:none;border:none;outline:none;border-bottom-left-radius:12px;border-bottom-right-radius:12px;box-sizing:border-box;padding:16px;font-size:16px;font-weight:400;white-space:pre-wrap;word-wrap:break-word;color:#565867;-webkit-font-smoothing:antialiased;overflow:scroll;bottom:0;overflow-x:hidden;overflow-y:auto}.messaging-user-input--send-btn{height:35px;min-width:35px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;margin:1rem 1rem 0 0;background-color:#aff}.messaging-user-input--send-btn svg path{stroke:#0e0e0e}.message{border-radius:12px 12px 12px 4px;white-space:pre-wrap;word-wrap:break-word;font-size:14px}.message.customer{color:#0e0e0e;background-color:#aff;border-radius:12px 12px 4px 12px}.message.bg-danger{background-color:#8A1C1C;color:white}.dots{align-items:center;display:flex;height:1rem}.typing .dot{background:#6E7577}.dot{display:inline-block;border-radius:0.250rem;height:0.50rem;margin-right:0.250rem;width:0.50rem;animation:typingAnimation 1.5s infinite ease-in-out}@keyframes typingAnimation{0%{transform:translateY(0px)}28%{transform:translateY(-0.25rem)}44%{transform:translateY(0px)}}.dot:nth-child(1){animation-delay:200ms}.dot:nth-child(2){animation-delay:300ms}.dot:nth-child(3){animation-delay:400ms}.text-sentence::first-letter{text-transform:uppercase}.visitor-email-capture-btn{background-color:#aff}.visitor-email-capture-btn svg path{stroke:#0e0e0e}.btn-primary{color:#fff;background-color:#aff;border-color:rgba(0,0,0,0)}.btn-primary:focus,.btn-primary.focus{color:#fff;background-color:#7ff;border-color:rgba(0,0,0,0)}.btn-primary:hover{color:#fff;background-color:#7ff;border-color:rgba(0,0,0,0)}.btn-primary:active,.btn-primary.active,.open>.btn-primary.dropdown-toggle{color:#fff;background-color:#7ff;background-image:none;border-color:rgba(0,0,0,0)}.btn-primary:active:hover,.btn-primary:active:focus,.btn-primary.focus:active,.btn-primary.active:hover,.btn-primary.active:focus,.btn-primary.active.focus,.open>.btn-primary.dropdown-toggle:hover,.open>.btn-primary.dropdown-toggle:focus,.open>.btn-primary.dropdown-toggle.focus{color:#fff;background-color:#53ffff;border-color:rgba(0,0,0,0)}.btn-primary.disabled:hover,.btn-primary.disabled:focus,.btn-primary.disabled.focus,.btn-primary[disabled]:hover,.btn-primary[disabled]:focus,.btn-primary.focus[disabled],fieldset[disabled] .btn-primary:hover,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary.focus{background-color:#aff;border-color:rgba(0,0,0,0)}.btn-primary .badge{color:#aff;background-color:#fff}a{color:#aff}a:hover,a:focus,a:active{color:#91ffff}.text-primary,a.text-muted:hover{color:#aff}.bg-primary,.bg-confetti-primary,.user-course-pager .btn:hover{background:#aff}.product-card-image.bg-primary:hover{background-color:#91ffff}.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:active,.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:hover,.navbar-default .navbar-nav>.open>a:focus,.nav-tabs>li>a:hover{color:#aff}#user-site-course-sidebar .block-link a.active,#user-site-course-sidebar .block-link a:hover{border-color:#aff}.form-control.focused,.form-control:focus{border-color:#aff}.nav-tabs>li>a:hover,.nav-tabs>li>a:active,.nav-tabs>li>a:focus{color:#aff}.nav-tabs>li.active>a,.nav-tabs>li.active>a:hover,.nav-tabs>li.active>a:active,.nav-tabs>li.active>a:focus{border-color:#aff}svg.stroke-primary *{stroke:#aff}svg.fill-primary *{fill:#aff}.comment.creator-comment img{box-shadow:0 0 0 2px white,0 0 0 4px #aff}code{color:#7ff}.quiz-question .quiz-answer-list .quiz-answer-list-item.unanswered.chosen:before{background:#aff}.quiz-question .quiz-answer-list .quiz-answer-list-item.unanswered.chosen:before,.quiz-question .quiz-answer-list .quiz-answer-list-item.unanswered.unanswered:hover:before{border-color:#aff}
+</style>
+
+  <script src="https://cdn.podia.com/assets/customer-d8af2de2786fd89468343f72926b1395a41598e3ca3727b2ea85adf016958652.js" data-turbo-track="reload"></script>
+  <link rel="stylesheet" href="https://cdn.podia.com/assets/ui-5babf53025d909dc93d3cd474c29a1bb6ad0daf963fbd92c6792e714302d5b76.css" data-turbo-track="reload" />
+  <link rel="stylesheet" href="https://cdn.podia.com/assets/customer-d81395d143a77256bff8c0c82b8b6df2a0e7645ccc51da3355a75a6fa29883e9.css" data-turbo-track="reload" />
+  <script type="text/javascript">
+  Podia.Customer = {"id":21594535,"email":"benoit.zel@gmail.com","first_name":"Benoit","last_name":"Zellal","stripe_id":"cus_NnBK3mjPSYkizr","created_at":1682625543150};
+</script>
+
+
+  <style>
+     :root {
+       --podia-creator-brand-color: #aaffff;
+       --podia-creator-brand-color-hover: #44ffff
+     }
+   </style>
+
+</head>
+
+<body class="theme-podia" data-controller="fullscreen">
+  
+
+    <div data-fullscreen-target="header">
+      <div id="page_header" class="react-page-header" style="background-color: #fdfdfd; color: #58697b;" data-controller="editor--page-section">
+  <div data-react-class="creator_ui/section_adapters/Header" data-react-props="{&quot;authenticationLinks&quot;:{&quot;login&quot;:{&quot;name&quot;:&quot;Se connecter&quot;,&quot;url&quot;:&quot;/login&quot;},&quot;logout&quot;:{&quot;name&quot;:&quot;Se déconnecter&quot;,&quot;url&quot;:&quot;/logout&quot;}},&quot;currentUser&quot;:{&quot;avatarUrl&quot;:&quot;https://www.gravatar.com/avatar/d157434a843e8632469f5e128baba8ca/?default=https%3A%2F%2Fd228am55mqbj0t.cloudfront.net%2Fdefaults%2Fgreen-BZ.png\u0026size=100&quot;,&quot;isAffiliate&quot;:false},&quot;dashboardLinks&quot;:[{&quot;name&quot;:&quot;Programmes&quot;,&quot;url&quot;:&quot;/products/home&quot;}],&quot;headerLinks&quot;:{&quot;749068&quot;:{&quot;id&quot;:749068,&quot;name&quot;:&quot;From Scratch - Développement web&quot;,&quot;position&quot;:0,&quot;value&quot;:&quot;https://fromscratch.podia.com/&quot;,&quot;visible&quot;:true}},&quot;id&quot;:&quot;page_header&quot;,&quot;layout&quot;:&quot;default&quot;,&quot;aspectRatio&quot;:&quot;natural&quot;,&quot;mediaWidth&quot;:&quot;0.4&quot;,&quot;mediaCorners&quot;:&quot;round&quot;,&quot;logo&quot;:&quot;https://d31ezp3r8jwmks.cloudfront.net/ep88n9jbp96f3b8tcuccubdm2h1n&quot;,&quot;sidebarActive&quot;:true,&quot;site&quot;:{&quot;name&quot;:&quot;From Scratch - Développement Web&quot;,&quot;url&quot;:&quot;/&quot;},&quot;storefrontLogo&quot;:null,&quot;theme&quot;:{&quot;name&quot;:&quot;custom&quot;,&quot;colors&quot;:{&quot;brand&quot;:&quot;#aaffff&quot;,&quot;background&quot;:&quot;#fdfdfd&quot;,&quot;button&quot;:&quot;#9dffff&quot;,&quot;buttonText&quot;:&quot;#242323&quot;,&quot;heading&quot;:&quot;#36434d&quot;,&quot;text&quot;:&quot;#58697b&quot;},&quot;fonts&quot;:{&quot;families&quot;:[&quot;Avenir-Next:700&quot;,&quot;Avenir-Next:400&quot;],&quot;styles&quot;:{&quot;preheadingFont&quot;:{&quot;family&quot;:&quot;Avenir-Next&quot;,&quot;weight&quot;:&quot;700&quot;,&quot;spacing&quot;:&quot;-0.02&quot;,&quot;height&quot;:&quot;1&quot;,&quot;case&quot;:&quot;none&quot;},&quot;headingFont&quot;:{&quot;family&quot;:&quot;Avenir-Next&quot;,&quot;weight&quot;:&quot;700&quot;,&quot;spacing&quot;:&quot;-0.01&quot;,&quot;height&quot;:&quot;1.45&quot;,&quot;case&quot;:&quot;none&quot;},&quot;subheadingFont&quot;:{&quot;family&quot;:&quot;Avenir-Next&quot;,&quot;weight&quot;:&quot;700&quot;,&quot;spacing&quot;:&quot;-0.03&quot;,&quot;height&quot;:&quot;1&quot;,&quot;case&quot;:&quot;none&quot;},&quot;bodyFont&quot;:{&quot;family&quot;:&quot;Avenir-Next&quot;,&quot;weight&quot;:&quot;400&quot;,&quot;spacing&quot;:&quot;0&quot;,&quot;height&quot;:&quot;1.8&quot;,&quot;case&quot;:null},&quot;buttonFont&quot;:{&quot;family&quot;:&quot;Avenir-Next&quot;,&quot;weight&quot;:&quot;400&quot;,&quot;spacing&quot;:&quot;0.03&quot;,&quot;height&quot;:&quot;2&quot;,&quot;case&quot;:&quot;none&quot;},&quot;navigationFont&quot;:{&quot;family&quot;:&quot;Avenir-Next&quot;,&quot;weight&quot;:&quot;400&quot;,&quot;spacing&quot;:&quot;0&quot;,&quot;height&quot;:&quot;1.8&quot;,&quot;case&quot;:&quot;none&quot;}},&quot;sizes&quot;:{&quot;headingFont&quot;:{&quot;h1&quot;:&quot;2.1&quot;,&quot;h2&quot;:&quot;1.6&quot;,&quot;h3&quot;:&quot;1.85&quot;},&quot;bodyFont&quot;:{&quot;md&quot;:&quot;1.1&quot;,&quot;sm&quot;:&quot;0.8&quot;},&quot;buttonFont&quot;:{&quot;md&quot;:&quot;1&quot;,&quot;sm&quot;:&quot;0.8&quot;},&quot;navigationFont&quot;:{&quot;md&quot;:0.8}},&quot;baseFontSize&quot;:&quot;20&quot;}},&quot;userLinks&quot;:[{&quot;name&quot;:&quot;Affiliation&quot;,&quot;url&quot;:&quot;/customer/affiliate&quot;},{&quot;name&quot;:&quot;Paramètres&quot;,&quot;url&quot;:&quot;/customer/settings/edit&quot;}],&quot;features&quot;:{}}" data-react-cache-id="creator_ui/section_adapters/Header-0"></div>
+</div>
+    </div>
+
+  <div data-turbo="true">
+      <div class="messaging-toasts-container">
+    <div class="messaging-toasts" data-controller="notifications--messaging-toasts"></div>
+  </div>
+    <div data-controller="notifications--sounds"></div>
+
+
+    <div data-reflex-permanent data-controller="toasts" aria-live="polite" aria-atomic="true" id="toasts-container" class="fixed-bottom d-flex justify-content-center align-items-center flex-md-column spacer-section" style="z-index: 10005;">
+      
+    </div>
+
+        <div class="container-fluid container-padding">
+    <div class="alert-list">
+    
+</div>
+
+
+    <div class="sidebar-container" data-fullscreen-target="container">
+      <div class="sidebar-contents" id="customer-sidebar" data-fullscreen-target="sidebar">
+        <ol class="sticky-contents pl-0 list-unstyled" style="max-width: 340px;">
+  <li class="list-group list-group-xs list-group-menu mb-6">
+  <section class="d-flex align-items-start">
+    <div class=""><a class="thumb thumb-lg thumb-photo thumb-link" style="background-image: url(https://d31ezp3r8jwmks.cloudfront.net/zkcz95u4w36zjnkyazhpa8l9nkve);" href="/view/courses/react-de-a-a-z">
+</a></div>
+    <div class="ml-3">
+      <header>
+        <h1 class="h4"><a class="text-grey-dark" href="/view/courses/react-de-a-a-z">React de A à Z</a></h1>
+        
+        <div class="bulleted">
+    
+    
+    <span class="bulleted-item"><span>  <div class="d-flex align-items-center">
+    <div class="progress-radial mr-2"
+          data-trail-color="#EDEFF0"
+          data-progress-color="#6E7477"
+          data-progress-stroke-width="12.5"
+          data-progress="0"
+          data-toggle="tooltip"
+          data-title="0%"
+          style="width: 1rem"></div>
+    <span>
+      0/18
+      complété
+    </span>
+  </div>
+</span></span>
+</div>
+      </header>
+    </div>
+  </section>
+</li>
+
+    <li class="list-group list-group-menu list-group-xs mb-6">
+  <nav aria-label="⚛️ COURS">
+      <header>
+        
+
+          <a href="/view/courses/react-de-a-a-z/1260753-cours">
+            <h2 class="h4 text-md mb-2">⚛️ COURS</h2>
+</a>
+
+        
+      </header>
+
+    <ol class="pl-0 mb-0 list-unstyled">
+      <li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260753-cours/3806398-cours-react-1-2">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    🎥 Cours React [1/2]
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action active" aria-current="page" href="/view/courses/react-de-a-a-z/1260753-cours/3806392-cours-react-2-2">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    🎥 Cours React [2/2]
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260753-cours/3806393-mise-en-ligne-d-un-site-en-react">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    🛠️ Mise en ligne d&#39;un site en React
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260753-cours/3806399-tp1-presentation-cooking-app">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    💡 [TP1 présentation] Cooking App
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260753-cours/3806570-tp1-explication-cooking-app">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    💡 [TP1 explication] Cooking app
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260753-cours/3861667-resume-des-hooks-utiles-en-react">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    🛠️ Résumé des Hooks (utiles) en React
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260753-cours/3925098-typescript-react">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    🎥 TypeScript + React
+</a></li>
+
+    </ol>
+  </nav>
+</li>
+
+    <li class="list-group list-group-menu list-group-xs mb-6">
+  <nav aria-label="💻 CRÉER UN SITE VITRINE">
+      <header>
+        
+
+          <a href="/view/courses/react-de-a-a-z/1260758-creer-un-site-vitrine">
+            <h2 class="h4 text-md mb-2">💻 CRÉER UN SITE VITRINE</h2>
+</a>
+
+        
+      </header>
+
+    <ol class="pl-0 mb-0 list-unstyled">
+      <li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260758-creer-un-site-vitrine/3806566-tp2-formulaire-en-react">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    💡 [TP2] Formulaire en React
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260758-creer-un-site-vitrine/3806568-app1-site-vitrine-d-agence-web">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    📱 [APP1] Site vitrine d&#39;Agence Web
+</a></li>
+
+    </ol>
+  </nav>
+</li>
+
+    <li class="list-group list-group-menu list-group-xs mb-6">
+  <nav aria-label="🎬 CRÉER UNE APPLICATION DE CINÉMA">
+      <header>
+        
+
+          <a href="/view/courses/react-de-a-a-z/1473089-creer-une-application-de-cinema">
+            <h2 class="h4 text-md mb-2">🎬 CRÉER UNE APPLICATION DE CINÉMA</h2>
+</a>
+
+        
+      </header>
+
+    <ol class="pl-0 mb-0 list-unstyled">
+      <li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1473089-creer-une-application-de-cinema/4579916-tp3-presentation-cine-app">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    💡 [TP3 présentation] Ciné App
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1473089-creer-une-application-de-cinema/4583799-tp3-explication-cine-app">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    💡 [TP3 explication] Ciné App
+</a></li>
+
+    </ol>
+  </nav>
+</li>
+
+    <li class="list-group list-group-menu list-group-xs mb-6">
+  <nav aria-label="📱 CRÉER UN DASHBOARD">
+      <header>
+        
+
+          <a href="/view/courses/react-de-a-a-z/1260762-creer-un-dashboard">
+            <h2 class="h4 text-md mb-2">📱 CRÉER UN DASHBOARD</h2>
+</a>
+
+        
+      </header>
+
+    <ol class="pl-0 mb-0 list-unstyled">
+      <li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260762-creer-un-dashboard/3853059-app2-application-crypto-watch">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    📱 [APP2] Application Crypto Watch
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260762-creer-un-dashboard/5907901-app2-crypto-watch-ajout-redux">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    📱 [APP2] Crypto Watch - Ajout Redux
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260762-creer-un-dashboard/5897810-cours-redux">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    🎥 Cours Redux
+</a></li>
+
+    </ol>
+  </nav>
+</li>
+
+    <li class="list-group list-group-menu list-group-xs mb-6">
+  <nav aria-label="💾 JAVASCRIPT FULLSTACK">
+      <header>
+        
+
+          <a href="/view/courses/react-de-a-a-z/1692760-javascript-fullstack">
+            <h2 class="h4 text-md mb-2">💾 JAVASCRIPT FULLSTACK</h2>
+</a>
+
+        
+      </header>
+
+    <ol class="pl-0 mb-0 list-unstyled">
+      <li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1692760-javascript-fullstack/3950280-cours-redux-toolkit">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    🎥 Cours Redux Toolkit
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1692760-javascript-fullstack/5345815-app3-p1-node-js">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    📱 [APP3 - P1] Node JS
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1692760-javascript-fullstack/5345813-app3-p2-react">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    📱 [APP3 - P2] React
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1692760-javascript-fullstack/5346137-app3-p3-redux-toolkit">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    📱 [APP3 - P3] Redux Toolkit
+</a></li>
+
+    </ol>
+  </nav>
+</li>
+
+</ol>
+
+      </div>
+      <div class="main-content">
+        <div id="lesson-header">
+  
+
+<div class="d-flex">
+  
+  <div class="w-100">
+    <div class="d-md-flex justify-content-md-between align-items-center spacer-section">
+      <div class="flex-fill mb-6 mb-md-0">
+        <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="text-muted" href="/products/home">Programmes</a></li>
+        <li class="breadcrumb-item"><a class="text-muted" href="/view/courses/react-de-a-a-z">Cours</a></li>
+        <li class="breadcrumb-item"><a class="text-muted" href="/view/courses/react-de-a-a-z/1260753-cours">Section</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Cours</li>
+  </ol>
+</nav>
+
+        <h1 class="pr-md-6 d-md-block d-none">🎥 Cours React [2/2]</h1>
+          <div class="dropdown d-block d-md-none">
+            <button class="btn dropdown-toggle text-left text-grey-dark chevron-grey-dark pl-2 ml-n2 pr-4 py-0"
+              type="button"
+              style="background-position: right center; white-space: normal;"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false">
+              <span class="h1">🎥 Cours React [2/2]</span>
+            </button>
+            <div id="sidebar-dropdown" class="dropdown-menu px-3 py-2" style="min-width: 250px; max-height: 400px; overflow: scroll">
+              <ol class="sticky-contents pl-0 list-unstyled" style="max-width: 340px;">
+  <li class="list-group list-group-xs list-group-menu mb-6">
+  <section class="d-flex align-items-start">
+    <div class=""><a class="thumb thumb-lg thumb-photo thumb-link" style="background-image: url(https://d31ezp3r8jwmks.cloudfront.net/zkcz95u4w36zjnkyazhpa8l9nkve);" href="/view/courses/react-de-a-a-z">
+</a></div>
+    <div class="ml-3">
+      <header>
+        <h1 class="h4"><a class="text-grey-dark" href="/view/courses/react-de-a-a-z">React de A à Z</a></h1>
+        
+        <div class="bulleted">
+    
+    
+    <span class="bulleted-item"><span>  <div class="d-flex align-items-center">
+    <div class="progress-radial mr-2"
+          data-trail-color="#EDEFF0"
+          data-progress-color="#6E7477"
+          data-progress-stroke-width="12.5"
+          data-progress="0"
+          data-toggle="tooltip"
+          data-title="0%"
+          style="width: 1rem"></div>
+    <span>
+      0/18
+      complété
+    </span>
+  </div>
+</span></span>
+</div>
+      </header>
+    </div>
+  </section>
+</li>
+
+    <li class="list-group list-group-menu list-group-xs mb-6">
+  <nav aria-label="⚛️ COURS">
+      <header>
+        
+
+          <a href="/view/courses/react-de-a-a-z/1260753-cours">
+            <h2 class="h4 text-md mb-2">⚛️ COURS</h2>
+</a>
+
+        
+      </header>
+
+    <ol class="pl-0 mb-0 list-unstyled">
+      <li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260753-cours/3806398-cours-react-1-2">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    🎥 Cours React [1/2]
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260753-cours/3806392-cours-react-2-2">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    🎥 Cours React [2/2]
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260753-cours/3806393-mise-en-ligne-d-un-site-en-react">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    🛠️ Mise en ligne d&#39;un site en React
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260753-cours/3806399-tp1-presentation-cooking-app">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    💡 [TP1 présentation] Cooking App
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260753-cours/3806570-tp1-explication-cooking-app">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    💡 [TP1 explication] Cooking app
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260753-cours/3861667-resume-des-hooks-utiles-en-react">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    🛠️ Résumé des Hooks (utiles) en React
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260753-cours/3925098-typescript-react">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    🎥 TypeScript + React
+</a></li>
+
+    </ol>
+  </nav>
+</li>
+
+    <li class="list-group list-group-menu list-group-xs mb-6">
+  <nav aria-label="💻 CRÉER UN SITE VITRINE">
+      <header>
+        
+
+          <a href="/view/courses/react-de-a-a-z/1260758-creer-un-site-vitrine">
+            <h2 class="h4 text-md mb-2">💻 CRÉER UN SITE VITRINE</h2>
+</a>
+
+        
+      </header>
+
+    <ol class="pl-0 mb-0 list-unstyled">
+      <li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260758-creer-un-site-vitrine/3806566-tp2-formulaire-en-react">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    💡 [TP2] Formulaire en React
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260758-creer-un-site-vitrine/3806568-app1-site-vitrine-d-agence-web">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    📱 [APP1] Site vitrine d&#39;Agence Web
+</a></li>
+
+    </ol>
+  </nav>
+</li>
+
+    <li class="list-group list-group-menu list-group-xs mb-6">
+  <nav aria-label="🎬 CRÉER UNE APPLICATION DE CINÉMA">
+      <header>
+        
+
+          <a href="/view/courses/react-de-a-a-z/1473089-creer-une-application-de-cinema">
+            <h2 class="h4 text-md mb-2">🎬 CRÉER UNE APPLICATION DE CINÉMA</h2>
+</a>
+
+        
+      </header>
+
+    <ol class="pl-0 mb-0 list-unstyled">
+      <li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1473089-creer-une-application-de-cinema/4579916-tp3-presentation-cine-app">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    💡 [TP3 présentation] Ciné App
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1473089-creer-une-application-de-cinema/4583799-tp3-explication-cine-app">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    💡 [TP3 explication] Ciné App
+</a></li>
+
+    </ol>
+  </nav>
+</li>
+
+    <li class="list-group list-group-menu list-group-xs mb-6">
+  <nav aria-label="📱 CRÉER UN DASHBOARD">
+      <header>
+        
+
+          <a href="/view/courses/react-de-a-a-z/1260762-creer-un-dashboard">
+            <h2 class="h4 text-md mb-2">📱 CRÉER UN DASHBOARD</h2>
+</a>
+
+        
+      </header>
+
+    <ol class="pl-0 mb-0 list-unstyled">
+      <li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260762-creer-un-dashboard/3853059-app2-application-crypto-watch">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    📱 [APP2] Application Crypto Watch
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260762-creer-un-dashboard/5907901-app2-crypto-watch-ajout-redux">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    📱 [APP2] Crypto Watch - Ajout Redux
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1260762-creer-un-dashboard/5897810-cours-redux">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    🎥 Cours Redux
+</a></li>
+
+    </ol>
+  </nav>
+</li>
+
+    <li class="list-group list-group-menu list-group-xs mb-6">
+  <nav aria-label="💾 JAVASCRIPT FULLSTACK">
+      <header>
+        
+
+          <a href="/view/courses/react-de-a-a-z/1692760-javascript-fullstack">
+            <h2 class="h4 text-md mb-2">💾 JAVASCRIPT FULLSTACK</h2>
+</a>
+
+        
+      </header>
+
+    <ol class="pl-0 mb-0 list-unstyled">
+      <li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1692760-javascript-fullstack/3950280-cours-redux-toolkit">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    🎥 Cours Redux Toolkit
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1692760-javascript-fullstack/5345815-app3-p1-node-js">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    📱 [APP3 - P1] Node JS
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1692760-javascript-fullstack/5345813-app3-p2-react">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    📱 [APP3 - P2] React
+</a></li>
+<li>
+  <a class="list-group-item list-group-item-action" href="/view/courses/react-de-a-a-z/1692760-javascript-fullstack/5346137-app3-p3-redux-toolkit">
+    <div class="list-group-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.5a1 1 0 00-1 1v7a1 1 0 001 1h10a1 1 0 001-1v-7a1 1 0 00-1-1H3zm-3 1a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H3a3 3 0 01-3-3v-7z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.788 5.363a1 1 0 011.035.068l2.5 1.75a1 1 0 010 1.638l-2.5 1.75A1 1 0 016.25 9.75v-3.5a1 1 0 01.538-.887z"></path></svg>
+
+    </div>
+    📱 [APP3 - P3] Redux Toolkit
+</a></li>
+
+    </ol>
+  </nav>
+</li>
+
+</ol>
+
+            </div>
+          </div>
+      </div>
+      <div class="mt-n2 mt-md-0">
+        <div class='btn-row'><button target="_blank" title="Open Fullscreen" aria-label="Open Fullscreen" data-action="fullscreen#toggle" data-fullscreen-target="openIcon" class="btn btn-md btn-outline-grey btn-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M8 2a1 1 0 011-1h5a1 1 0 011 1v5a1 1 0 11-2 0V4.414l-2.293 2.293a1 1 0 01-1.414-1.414L11.586 3H9a1 1 0 01-1-1zM2 8a1 1 0 011 1v2.586l2.293-2.293a1 1 0 011.414 1.414L4.414 13H7a1 1 0 110 2H2a1 1 0 01-1-1V9a1 1 0 011-1z"></path></svg>
+
+  
+  
+</button><button target="_blank" title="Close Fullscreen" aria-label="Close Fullscreen" data-action="fullscreen#toggle" data-fullscreen-target="closeIcon" class="btn btn-md btn-outline-grey btn-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M9.5.5a1 1 0 011 1v2.586l2.293-2.293a1 1 0 111.414 1.414L11.914 5.5H14.5a1 1 0 110 2h-5a1 1 0 01-1-1v-5a1 1 0 011-1zm-9 9a1 1 0 011-1h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.586l-2.293 2.293a1 1 0 01-1.414-1.414L4.086 10.5H1.5a1 1 0 01-1-1z"></path></svg>
+
+  
+  
+</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+  <div id="lesson-content">
+      <div class="wistia_embed wistia_async_lh99x33utg playerColor=#aaffff controlsVisibleOnLoad=false fullscreenButton=true videoFoam=true autoPlay=false resumable=true" style="width:640px; height:360px;"></div>
+
+  <script>
+    window._wq = window._wq || [];
+    _wq.push({
+          id: "lh99x33utg",
+          options: {
+                plugin: {
+                      "captions-v1": {
+                            onByDefault: window.getCookie('wistia.captions.onByDefault')
+                          }
+                    }
+              },
+          onReady: function(video) {
+                video.plugin('captions').then(function(plugin) {
+                      plugin.captions.length ? plugin.enable() : plugin.disable()
+                    })
+
+                video.bind('captionschange', function(captions) {
+                      window.setCookie('wistia.captions.onByDefault', captions.visible)
+                    })
+              }
+        });
+  </script>
+
+<div class="spacer-section"></div>
+
+<div class="text-longform" data-controller="richtext">
+  <div>Support de démarrage : <a href="https://github.com/JustFS/mastering-front-end/archive/2b7e3091af65573df5cca8e71f2ef54612481cd0.zip">https://github.com/JustFS/mastering-front-end/archive/2b7e3091af65573df5cca8e71f2ef54612481cd0.zip</a>&nbsp;<br><br>0:00 - Intro &amp; Installation<br>13:53 - Style dynamique<br>23:48 - Read (get)<br>37:07 - Props (composant Article)<br>47:55 - Create (post)<br>1:03:27 - Update<br>1:23:29 - Delete<br><br>
+</div><div>Cours terminé : <a href="https://github.com/JustFS/mastering-front-end/archive/6e548194dffc45203857a0ca7ecab8dbd38211e5.zip">https://github.com/JustFS/mastering-front-end/archive/6e548194dffc45203857a0ca7ecab8dbd38211e5.zip</a>&nbsp;</div>
+</div>
+
+  </div>
+
+  <div class="spacer-section"></div>
+
+  <div id="lesson-navigation"><nav class="btn-row justify-content-end">
+  <span data-toggle="tooltip"><a href="/view/courses/react-de-a-a-z/1260753-cours/3806398-cours-react-1-2" aria-label="Précédent" title="Précédent" rel="prev" class="btn btn-md btn-outline-grey btn-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M15 8a1 1 0 01-1 1H4.414l3.293 3.293a1 1 0 11-1.414 1.414l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 1.414L4.414 7H14a1 1 0 011 1z"></path></svg>
+
+  
+  
+</a></span>
+  <span data-toggle="tooltip"><a href="/view/courses/react-de-a-a-z/1260753-cours/3806393-mise-en-ligne-d-un-site-en-react" aria-label="Continuer" title="Continuer" rel="next" class="btn btn-md btn-outline-grey btn-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M1 8a1 1 0 001 1h9.586l-3.293 3.293a1 1 0 101.414 1.414l5-5a1 1 0 000-1.414l-5-5a1 1 0 00-1.414 1.414L11.586 7H2a1 1 0 00-1 1z"></path></svg>
+
+  
+  
+</a></span>
+
+    <div id="completion-button">
+      <span data-toggle="tooltip"><a href="/view/courses/react-de-a-a-z/1260753-cours/3806392-cours-react-2-2/completions" data-method="post" data-remote="true" class="btn btn-md btn-dark btn-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M4 3a1 1 0 00-1 1v8a1 1 0 001 1h8a1 1 0 001-1V4a1 1 0 00-1-1H4zM1 4a3 3 0 013-3h8a3 3 0 013 3v8a3 3 0 01-3 3H4a3 3 0 01-3-3V4z"></path></svg>
+
+  <span>Valider</span>
+  
+</a></span>
+    </div>
+</nav>
+</div>
+
+    <div id="lesson-comments"><div class="spacer-section"></div>
+
+<div class="border-top spacer-section"></div>
+
+<div id="comments" data-controller="podia--comments--comment--form-component">
+  <div class="d-flex align-items-center justify-content-between mb-6">
+    <div class="d-flex align-items-center">
+      <h2 id="replies_header">
+          27 Commentaires
+</h2>
+    </div>
+
+  </div>
+
+  <turbo-frame id="replies_video_block_3806392">
+      <div class="mb-3" id="pagination_video_block_3806392">
+    <a href="/products/comments?commentable_sgid=BAh7CEkiCGdpZAY6BkVUSSIjZ2lkOi8vcG9kaWEvVmlkZW9CbG9jay8zODA2MzkyBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVEkiHTIwMjMtMDgtMjBUMDk6MDk6MzcuNzUyWgY7AFQ%3D--2bf8b50a6c2086bd3811c7e6a3a646ed1c6d2460&amp;page=1" class="btn btn-sm btn-transparent-secondary" data-remote="true">
+  
+  <span>Montrer 12 commentaires précédents…</span>
+  
+</a>
+  </div>
+
+<div data-controller="podia--comments--comment--form-component">
+  <turbo-frame id="comment_906654">
+    <div class="mb-6 mb-sm-8" id="reply_content_comment_906654">
+  <div class="d-flex mb-2">
+    <div class="w-100">
+      <span class="d-flex align-items-center space-x-2 flex-wrap mt-n1">
+          <a class="d-flex align-items-center my-1" href="#">
+    <div class="avatar avatar-xs" style="background-image: url(https://www.gravatar.com/avatar/798a143b5105a4f0ec9525340492a414/?default=https%3A%2F%2Fd228am55mqbj0t.cloudfront.net%2Fdefaults%2Fgreen-MS.png&amp;size=224);"></div>
+</a>  <a class="font-weight-bold text-sm text-grey-dark my-1" href="#">
+    Mathieu Souzani
+</a>
+        
+        <span class="text-muted text-sm my-1" data-toggle="tooltip" data-title="Sep 15, 2022 at 9:29 AM CEST">Sep 15, 2022</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="text-longform mb-3" data-controller="richtext"><div>du coup pareil à la fin sur la fonction delete. Plus besoin de faire un window.reload.&nbsp;</div></div>
+
+  <div class="btn-row btn-row-xxs ml-n2 mt-n1 piped piped-slim">
+    <a href="/products/comments/new?commentable_sgid=BAh7CEkiCGdpZAY6BkVUSSIfZ2lkOi8vcG9kaWEvQ29tbWVudC85MDY2NTQGOwBUSSIMcHVycG9zZQY7AFRJIgxkZWZhdWx0BjsAVEkiD2V4cGlyZXNfYXQGOwBUSSIdMjAyMy0wOC0yMFQwOTowOTozNy43NjJaBjsAVA%3D%3D--16e4e5982a54e102cdccef10d4169842238fa027" id="reply_button_comment_906654" rounded="true" tight="true" data-turbo-frame="new_comment_comment_906654" class="btn btn-xs btn-transparent-soft btn-rounded btn-tight btn-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M8.00001 2.875C4.48628 2.875 1.87501 5.29144 1.87501 7.99998C1.87501 8.97755 2.20347 9.89871 2.78849 10.6896C2.96707 10.9311 3.00936 11.2472 2.90052 11.5271L2.38962 12.8408L4.52487 12.429C4.70354 12.3946 4.88852 12.4167 5.05404 12.4923C5.97258 12.9117 6.97829 13.1283 7.99714 13.125L8.00001 13.125C11.5137 13.125 14.125 10.7085 14.125 7.99998C14.125 5.29144 11.5137 2.875 8.00001 2.875ZM0.125012 7.99998C0.125012 4.08154 3.78263 1.125 8.00001 1.125C12.2174 1.125 15.875 4.08154 15.875 7.99998C15.875 11.918 12.2182 14.8743 8.00145 14.875C6.82796 14.8786 5.66655 14.6483 4.58956 14.1988L1.16571 14.8591C0.852947 14.9194 0.532113 14.805 0.328083 14.5604C0.124053 14.3158 0.0690599 13.9797 0.184508 13.6828L1.10237 11.3226C0.483786 10.3439 0.125012 9.21127 0.125012 7.99998Z"></path></svg>
+
+  <span>Commenter</span>
+  
+</a>
+      <a id="like_button_comment_906654" rounded="true" tight="true" href="/products/comments/906654/likes" data-method="patch" data-remote="true" active="false" class="btn btn-xs btn-transparent-soft btn-rounded btn-tight btn-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M8.95881 1.65792C8.57681 1.96672 8.25583 2.30588 7.99987 2.61551C7.74389 2.30589 7.4229 1.96674 7.0409 1.65794C6.48196 1.20613 5.75615 0.790345 4.88452 0.663875C3.99312 0.534537 3.03086 0.720176 2.04679 1.33891C-0.147514 2.71858 -0.274176 5.63088 0.737243 8.22003C1.78055 10.8908 4.13607 13.6454 7.6267 15.2914C7.86303 15.4029 8.13679 15.4029 8.37311 15.2914C11.8636 13.6454 14.2192 10.8909 15.2626 8.22009C16.2741 5.63094 16.1474 2.71863 13.953 1.3389C12.9689 0.720156 12.0066 0.534497 11.1152 0.663829C10.2435 0.790294 9.51773 1.20609 8.95881 1.65792ZM10.059 3.01885C9.65844 3.34264 9.33268 3.73063 9.1034 4.04778L8.77268 4.56013C8.62087 4.84598 8.32363 5.0247 7.99993 5.02471C7.67675 5.02472 7.37984 4.84639 7.22778 4.56135L6.89639 4.04783C6.6671 3.73068 6.34131 3.34269 5.94076 3.0189C5.53939 2.69445 5.09913 2.46334 4.63323 2.39574C4.18709 2.33101 3.64036 2.40412 2.97829 2.8204C1.88031 3.51075 1.45819 5.25605 2.36729 7.58328C3.20873 9.7373 5.11484 12.0524 7.9999 13.5254C10.8849 12.0523 12.7911 9.73732 13.6326 7.5833C14.5417 5.2561 14.1196 3.51081 13.0215 2.8204C12.3594 2.40408 11.8126 2.33097 11.3665 2.3957C10.9006 2.46329 10.4603 2.6944 10.059 3.01885Z"></path></svg>
+
+  <span>
+    J&#39;aime 1
+</span>
+  
+</a>
+    <span>
+  <div class="dropdown dropright">
+    <button rounded="true" id="commentDropdownMenuButton_906654" data-toggle-button-states-target="button" data-toggle="dropdown" data-boundary="window" class="btn btn-xs btn-transparent-soft btn-rounded btn-icon" aria-haspopup="true" aria-expanded="false">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 8a1.5 1.5 0 011.499-1.5h.01a1.5 1.5 0 010 3h-.01A1.5 1.5 0 011.5 8zm4.996 0a1.5 1.5 0 011.499-1.5h.01a1.5 1.5 0 010 3h-.01A1.5 1.5 0 016.496 8zm4.996 0a1.5 1.5 0 011.5-1.5h.01a1.5 1.5 0 010 3h-.01a1.5 1.5 0 01-1.5-1.5z"></path></svg>
+
+  
+  
+</button>    <div class="dropdown-menu" aria-labelledby="commentDropdownMenuButton_906654">
+      <div class="dropdown-item-group">
+        
+        <a class="dropdown-item text-warning" data-controller="ajax-modal" data-action="click-&gt;ajax-modal#showModal ajax:success-&gt;ajax-modal#renderModal" data-ajax-modal-target="#report_comment_906654" data-remote="true" href="/products/comments/906654/confirm_report">Signaler le commentaire...</a>
+      </div>
+    </div>
+  </div>
+<span>
+
+  </div>
+</div>
+
+  </turbo-frame>
+
+  <div class="border-left pl-6">
+    <div id="replies_comment_906654">
+      
+    </div>
+
+      <turbo-frame id="new_comment_comment_906654">
+      </turbo-frame>
+  </div>
+</div>
+<div data-controller="podia--comments--comment--form-component">
+  <turbo-frame id="comment_1115582">
+    <div class="mb-6 mb-sm-8" id="reply_content_comment_1115582">
+  <div class="d-flex mb-2">
+    <div class="w-100">
+      <span class="d-flex align-items-center space-x-2 flex-wrap mt-n1">
+          <a class="d-flex align-items-center my-1" href="#">
+    <div class="avatar avatar-xs" style="background-image: url(https://www.gravatar.com/avatar/032365d1574280bc1cb365e814ef2e6a/?default=https%3A%2F%2Fd228am55mqbj0t.cloudfront.net%2Fdefaults%2Fteal-DA.png&amp;size=224);"></div>
+</a>  <a class="font-weight-bold text-sm text-grey-dark my-1" href="#">
+    daniel ammar
+</a>
+        
+        <span class="text-muted text-sm my-1" data-toggle="tooltip" data-title="Jan 22, 2023 at 11:33 AM CET">Jan 22</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="text-longform mb-3" data-controller="richtext"><div>Bonjour,j'ai terminé cette deuxième partie react avec le blog,très clair,merci beaucoup.&nbsp;<br>J'ai une question générale,lorsque je crée le côté&nbsp; back je voulais savoir comment je structure le Model mongoose avec l'array qui a été&nbsp; fait dans le npm json-server,je ne sais pas comment m'y prendre.&nbsp;<br>De même dans le site vitrine,je veux mettre tout les projets qui sont dans le npm json-server,dans une vrai database(avec mongo db)comment je peux faire? En vous remerciant pour votre aide<br><br>
+</div></div>
+
+  <div class="btn-row btn-row-xxs ml-n2 mt-n1 piped piped-slim">
+    <a href="/products/comments/new?commentable_sgid=BAh7CEkiCGdpZAY6BkVUSSIgZ2lkOi8vcG9kaWEvQ29tbWVudC8xMTE1NTgyBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVEkiHTIwMjMtMDgtMjBUMDk6MDk6MzcuNzc4WgY7AFQ%3D--dc84fed34653c17e3a735cafb2c8ab652b626b29" id="reply_button_comment_1115582" rounded="true" tight="true" data-turbo-frame="new_comment_comment_1115582" class="btn btn-xs btn-transparent-soft btn-rounded btn-tight btn-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M8.00001 2.875C4.48628 2.875 1.87501 5.29144 1.87501 7.99998C1.87501 8.97755 2.20347 9.89871 2.78849 10.6896C2.96707 10.9311 3.00936 11.2472 2.90052 11.5271L2.38962 12.8408L4.52487 12.429C4.70354 12.3946 4.88852 12.4167 5.05404 12.4923C5.97258 12.9117 6.97829 13.1283 7.99714 13.125L8.00001 13.125C11.5137 13.125 14.125 10.7085 14.125 7.99998C14.125 5.29144 11.5137 2.875 8.00001 2.875ZM0.125012 7.99998C0.125012 4.08154 3.78263 1.125 8.00001 1.125C12.2174 1.125 15.875 4.08154 15.875 7.99998C15.875 11.918 12.2182 14.8743 8.00145 14.875C6.82796 14.8786 5.66655 14.6483 4.58956 14.1988L1.16571 14.8591C0.852947 14.9194 0.532113 14.805 0.328083 14.5604C0.124053 14.3158 0.0690599 13.9797 0.184508 13.6828L1.10237 11.3226C0.483786 10.3439 0.125012 9.21127 0.125012 7.99998Z"></path></svg>
+
+  <span>Commenter 4</span>
+  
+</a>
+      <a id="like_button_comment_1115582" rounded="true" tight="true" href="/products/comments/1115582/likes" data-method="patch" data-remote="true" active="false" class="btn btn-xs btn-transparent-soft btn-rounded btn-tight btn-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M8.95881 1.65792C8.57681 1.96672 8.25583 2.30588 7.99987 2.61551C7.74389 2.30589 7.4229 1.96674 7.0409 1.65794C6.48196 1.20613 5.75615 0.790345 4.88452 0.663875C3.99312 0.534537 3.03086 0.720176 2.04679 1.33891C-0.147514 2.71858 -0.274176 5.63088 0.737243 8.22003C1.78055 10.8908 4.13607 13.6454 7.6267 15.2914C7.86303 15.4029 8.13679 15.4029 8.37311 15.2914C11.8636 13.6454 14.2192 10.8909 15.2626 8.22009C16.2741 5.63094 16.1474 2.71863 13.953 1.3389C12.9689 0.720156 12.0066 0.534497 11.1152 0.663829C10.2435 0.790294 9.51773 1.20609 8.95881 1.65792ZM10.059 3.01885C9.65844 3.34264 9.33268 3.73063 9.1034 4.04778L8.77268 4.56013C8.62087 4.84598 8.32363 5.0247 7.99993 5.02471C7.67675 5.02472 7.37984 4.84639 7.22778 4.56135L6.89639 4.04783C6.6671 3.73068 6.34131 3.34269 5.94076 3.0189C5.53939 2.69445 5.09913 2.46334 4.63323 2.39574C4.18709 2.33101 3.64036 2.40412 2.97829 2.8204C1.88031 3.51075 1.45819 5.25605 2.36729 7.58328C3.20873 9.7373 5.11484 12.0524 7.9999 13.5254C10.8849 12.0523 12.7911 9.73732 13.6326 7.5833C14.5417 5.2561 14.1196 3.51081 13.0215 2.8204C12.3594 2.40408 11.8126 2.33097 11.3665 2.3957C10.9006 2.46329 10.4603 2.6944 10.059 3.01885Z"></path></svg>
+
+  <span>
+    J&#39;aime
+</span>
+  
+</a>
+    <span>
+  <div class="dropdown dropright">
+    <button rounded="true" id="commentDropdownMenuButton_1115582" data-toggle-button-states-target="button" data-toggle="dropdown" data-boundary="window" class="btn btn-xs btn-transparent-soft btn-rounded btn-icon" aria-haspopup="true" aria-expanded="false">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 8a1.5 1.5 0 011.499-1.5h.01a1.5 1.5 0 010 3h-.01A1.5 1.5 0 011.5 8zm4.996 0a1.5 1.5 0 011.499-1.5h.01a1.5 1.5 0 010 3h-.01A1.5 1.5 0 016.496 8zm4.996 0a1.5 1.5 0 011.5-1.5h.01a1.5 1.5 0 010 3h-.01a1.5 1.5 0 01-1.5-1.5z"></path></svg>
+
+  
+  
+</button>    <div class="dropdown-menu" aria-labelledby="commentDropdownMenuButton_1115582">
+      <div class="dropdown-item-group">
+        
+        <a class="dropdown-item text-warning" data-controller="ajax-modal" data-action="click-&gt;ajax-modal#showModal ajax:success-&gt;ajax-modal#renderModal" data-ajax-modal-target="#report_comment_1115582" data-remote="true" href="/products/comments/1115582/confirm_report">Signaler le commentaire...</a>
+      </div>
+    </div>
+  </div>
+<span>
+
+  </div>
+</div>
+
+  </turbo-frame>
+
+  <div class="border-left pl-6">
+    <div id="replies_comment_1115582">
+        <div class="mb-3" id="pagination_comment_1115582">
+    <a href="/products/comments?commentable_sgid=BAh7CEkiCGdpZAY6BkVUSSIgZ2lkOi8vcG9kaWEvQ29tbWVudC8xMTE1NTgyBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVEkiHTIwMjMtMDgtMjBUMDk6MDk6MzcuNzg2WgY7AFQ%3D--f529af89928f32f7a1d65420e0762e447e2b3ec0&amp;page=1" class="btn btn-sm btn-transparent-secondary" data-remote="true">
+  
+  <span>Montrer 3 commentaires précédents…</span>
+  
+</a>
+  </div>
+
+<div data-controller="">
+  <turbo-frame id="comment_1126730">
+    <div class="mb-6 mb-sm-8" id="reply_content_comment_1126730">
+  <div class="d-flex mb-2">
+    <div class="w-100">
+      <span class="d-flex align-items-center space-x-2 flex-wrap mt-n1">
+          <a class="d-flex align-items-center my-1" href="#">
+    <div class="avatar avatar-xs" style="background-image: url(https://www.gravatar.com/avatar/032365d1574280bc1cb365e814ef2e6a/?default=https%3A%2F%2Fd228am55mqbj0t.cloudfront.net%2Fdefaults%2Fteal-DA.png&amp;size=224);"></div>
+</a>  <a class="font-weight-bold text-sm text-grey-dark my-1" href="#">
+    daniel ammar
+</a>
+        
+        <span class="text-muted text-sm my-1" data-toggle="tooltip" data-title="Jan 27, 2023 at 11:57 AM CET">Jan 27</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="text-longform mb-3" data-controller="richtext"><div>bonjour Julien,merci pour tes precisions,j'ai reussi a faire le cote back,ca marche impecable,merci encore</div></div>
+
+  <div class="btn-row btn-row-xxs ml-n2 mt-n1 piped piped-slim">
+    <a href="/products/comments/new?commentable_sgid=BAh7CEkiCGdpZAY6BkVUSSIgZ2lkOi8vcG9kaWEvQ29tbWVudC8xMTE1NTgyBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVEkiHTIwMjMtMDgtMjBUMDk6MDk6MzcuNzkzWgY7AFQ%3D--bbea27700e5653a03ca3600a226d08288a1e5458" id="reply_button_comment_1126730" rounded="true" tight="true" data-turbo-frame="new_comment_comment_1115582" class="btn btn-xs btn-transparent-soft btn-rounded btn-tight btn-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M8.00001 2.875C4.48628 2.875 1.87501 5.29144 1.87501 7.99998C1.87501 8.97755 2.20347 9.89871 2.78849 10.6896C2.96707 10.9311 3.00936 11.2472 2.90052 11.5271L2.38962 12.8408L4.52487 12.429C4.70354 12.3946 4.88852 12.4167 5.05404 12.4923C5.97258 12.9117 6.97829 13.1283 7.99714 13.125L8.00001 13.125C11.5137 13.125 14.125 10.7085 14.125 7.99998C14.125 5.29144 11.5137 2.875 8.00001 2.875ZM0.125012 7.99998C0.125012 4.08154 3.78263 1.125 8.00001 1.125C12.2174 1.125 15.875 4.08154 15.875 7.99998C15.875 11.918 12.2182 14.8743 8.00145 14.875C6.82796 14.8786 5.66655 14.6483 4.58956 14.1988L1.16571 14.8591C0.852947 14.9194 0.532113 14.805 0.328083 14.5604C0.124053 14.3158 0.0690599 13.9797 0.184508 13.6828L1.10237 11.3226C0.483786 10.3439 0.125012 9.21127 0.125012 7.99998Z"></path></svg>
+
+  <span>Commenter</span>
+  
+</a>
+      <a id="like_button_comment_1126730" rounded="true" tight="true" href="/products/comments/1126730/likes" data-method="patch" data-remote="true" active="false" class="btn btn-xs btn-transparent-soft btn-rounded btn-tight btn-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M8.95881 1.65792C8.57681 1.96672 8.25583 2.30588 7.99987 2.61551C7.74389 2.30589 7.4229 1.96674 7.0409 1.65794C6.48196 1.20613 5.75615 0.790345 4.88452 0.663875C3.99312 0.534537 3.03086 0.720176 2.04679 1.33891C-0.147514 2.71858 -0.274176 5.63088 0.737243 8.22003C1.78055 10.8908 4.13607 13.6454 7.6267 15.2914C7.86303 15.4029 8.13679 15.4029 8.37311 15.2914C11.8636 13.6454 14.2192 10.8909 15.2626 8.22009C16.2741 5.63094 16.1474 2.71863 13.953 1.3389C12.9689 0.720156 12.0066 0.534497 11.1152 0.663829C10.2435 0.790294 9.51773 1.20609 8.95881 1.65792ZM10.059 3.01885C9.65844 3.34264 9.33268 3.73063 9.1034 4.04778L8.77268 4.56013C8.62087 4.84598 8.32363 5.0247 7.99993 5.02471C7.67675 5.02472 7.37984 4.84639 7.22778 4.56135L6.89639 4.04783C6.6671 3.73068 6.34131 3.34269 5.94076 3.0189C5.53939 2.69445 5.09913 2.46334 4.63323 2.39574C4.18709 2.33101 3.64036 2.40412 2.97829 2.8204C1.88031 3.51075 1.45819 5.25605 2.36729 7.58328C3.20873 9.7373 5.11484 12.0524 7.9999 13.5254C10.8849 12.0523 12.7911 9.73732 13.6326 7.5833C14.5417 5.2561 14.1196 3.51081 13.0215 2.8204C12.3594 2.40408 11.8126 2.33097 11.3665 2.3957C10.9006 2.46329 10.4603 2.6944 10.059 3.01885Z"></path></svg>
+
+  <span>
+    J&#39;aime
+</span>
+  
+</a>
+    <span>
+  <div class="dropdown dropright">
+    <button rounded="true" id="commentDropdownMenuButton_1126730" data-toggle-button-states-target="button" data-toggle="dropdown" data-boundary="window" class="btn btn-xs btn-transparent-soft btn-rounded btn-icon" aria-haspopup="true" aria-expanded="false">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 8a1.5 1.5 0 011.499-1.5h.01a1.5 1.5 0 010 3h-.01A1.5 1.5 0 011.5 8zm4.996 0a1.5 1.5 0 011.499-1.5h.01a1.5 1.5 0 010 3h-.01A1.5 1.5 0 016.496 8zm4.996 0a1.5 1.5 0 011.5-1.5h.01a1.5 1.5 0 010 3h-.01a1.5 1.5 0 01-1.5-1.5z"></path></svg>
+
+  
+  
+</button>    <div class="dropdown-menu" aria-labelledby="commentDropdownMenuButton_1126730">
+      <div class="dropdown-item-group">
+        
+        <a class="dropdown-item text-warning" data-controller="ajax-modal" data-action="click-&gt;ajax-modal#showModal ajax:success-&gt;ajax-modal#renderModal" data-ajax-modal-target="#report_comment_1126730" data-remote="true" href="/products/comments/1126730/confirm_report">Signaler le commentaire...</a>
+      </div>
+    </div>
+  </div>
+<span>
+
+  </div>
+</div>
+
+  </turbo-frame>
+
+  <div class="border-left pl-6">
+    <div id="replies_comment_1126730">
+      
+    </div>
+
+  </div>
+</div>
+
+
+    </div>
+
+      <turbo-frame id="new_comment_comment_1115582">
+      </turbo-frame>
+  </div>
+</div>
+<div data-controller="podia--comments--comment--form-component">
+  <turbo-frame id="comment_1311606">
+    <div class="mb-6 mb-sm-8" id="reply_content_comment_1311606">
+  <div class="d-flex mb-2">
+    <div class="w-100">
+      <span class="d-flex align-items-center space-x-2 flex-wrap mt-n1">
+          <a class="d-flex align-items-center my-1" href="#">
+    <div class="avatar avatar-xs" style="background-image: url(https://www.gravatar.com/avatar/c4dd9c25650053f26d858506a0dd835a/?default=https%3A%2F%2Fd228am55mqbj0t.cloudfront.net%2Fdefaults%2Fyellow-DV.png&amp;size=224);"></div>
+</a>  <a class="font-weight-bold text-sm text-grey-dark my-1" href="#">
+    Didier Viain
+</a>
+        
+        <span class="text-muted text-sm my-1" data-toggle="tooltip" data-title="May 6, 2023 at 9:58 AM CEST">May 6</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="text-longform mb-3" data-controller="richtext"><p style="text-align:left;" class="text-base">Bonjour, juste pour information, je suis rendu à la 58e au moment où il faut réactualiser la bdd en temps réel sur la page. Après avoir mis le getData(); comme indiqué dans votre vidéo, j'ai bien mon affichage qui se rafraichit en temps réel. Peut-être est-ce expliqué plus loin dans la vidéo, mais à ce point, votre code fonctionne chez moi</p></div>
+
+  <div class="btn-row btn-row-xxs ml-n2 mt-n1 piped piped-slim">
+    <a href="/products/comments/new?commentable_sgid=BAh7CEkiCGdpZAY6BkVUSSIgZ2lkOi8vcG9kaWEvQ29tbWVudC8xMzExNjA2BjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVEkiHTIwMjMtMDgtMjBUMDk6MDk6MzcuODEwWgY7AFQ%3D--e0f3c32fbd1f624b9dc3b7cf0d67721c10a4147d" id="reply_button_comment_1311606" rounded="true" tight="true" data-turbo-frame="new_comment_comment_1311606" class="btn btn-xs btn-transparent-soft btn-rounded btn-tight btn-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M8.00001 2.875C4.48628 2.875 1.87501 5.29144 1.87501 7.99998C1.87501 8.97755 2.20347 9.89871 2.78849 10.6896C2.96707 10.9311 3.00936 11.2472 2.90052 11.5271L2.38962 12.8408L4.52487 12.429C4.70354 12.3946 4.88852 12.4167 5.05404 12.4923C5.97258 12.9117 6.97829 13.1283 7.99714 13.125L8.00001 13.125C11.5137 13.125 14.125 10.7085 14.125 7.99998C14.125 5.29144 11.5137 2.875 8.00001 2.875ZM0.125012 7.99998C0.125012 4.08154 3.78263 1.125 8.00001 1.125C12.2174 1.125 15.875 4.08154 15.875 7.99998C15.875 11.918 12.2182 14.8743 8.00145 14.875C6.82796 14.8786 5.66655 14.6483 4.58956 14.1988L1.16571 14.8591C0.852947 14.9194 0.532113 14.805 0.328083 14.5604C0.124053 14.3158 0.0690599 13.9797 0.184508 13.6828L1.10237 11.3226C0.483786 10.3439 0.125012 9.21127 0.125012 7.99998Z"></path></svg>
+
+  <span>Commenter</span>
+  
+</a>
+      <a id="like_button_comment_1311606" rounded="true" tight="true" href="/products/comments/1311606/likes" data-method="patch" data-remote="true" active="false" class="btn btn-xs btn-transparent-soft btn-rounded btn-tight btn-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M8.95881 1.65792C8.57681 1.96672 8.25583 2.30588 7.99987 2.61551C7.74389 2.30589 7.4229 1.96674 7.0409 1.65794C6.48196 1.20613 5.75615 0.790345 4.88452 0.663875C3.99312 0.534537 3.03086 0.720176 2.04679 1.33891C-0.147514 2.71858 -0.274176 5.63088 0.737243 8.22003C1.78055 10.8908 4.13607 13.6454 7.6267 15.2914C7.86303 15.4029 8.13679 15.4029 8.37311 15.2914C11.8636 13.6454 14.2192 10.8909 15.2626 8.22009C16.2741 5.63094 16.1474 2.71863 13.953 1.3389C12.9689 0.720156 12.0066 0.534497 11.1152 0.663829C10.2435 0.790294 9.51773 1.20609 8.95881 1.65792ZM10.059 3.01885C9.65844 3.34264 9.33268 3.73063 9.1034 4.04778L8.77268 4.56013C8.62087 4.84598 8.32363 5.0247 7.99993 5.02471C7.67675 5.02472 7.37984 4.84639 7.22778 4.56135L6.89639 4.04783C6.6671 3.73068 6.34131 3.34269 5.94076 3.0189C5.53939 2.69445 5.09913 2.46334 4.63323 2.39574C4.18709 2.33101 3.64036 2.40412 2.97829 2.8204C1.88031 3.51075 1.45819 5.25605 2.36729 7.58328C3.20873 9.7373 5.11484 12.0524 7.9999 13.5254C10.8849 12.0523 12.7911 9.73732 13.6326 7.5833C14.5417 5.2561 14.1196 3.51081 13.0215 2.8204C12.3594 2.40408 11.8126 2.33097 11.3665 2.3957C10.9006 2.46329 10.4603 2.6944 10.059 3.01885Z"></path></svg>
+
+  <span>
+    J&#39;aime
+</span>
+  
+</a>
+    <span>
+  <div class="dropdown dropright">
+    <button rounded="true" id="commentDropdownMenuButton_1311606" data-toggle-button-states-target="button" data-toggle="dropdown" data-boundary="window" class="btn btn-xs btn-transparent-soft btn-rounded btn-icon" aria-haspopup="true" aria-expanded="false">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 8a1.5 1.5 0 011.499-1.5h.01a1.5 1.5 0 010 3h-.01A1.5 1.5 0 011.5 8zm4.996 0a1.5 1.5 0 011.499-1.5h.01a1.5 1.5 0 010 3h-.01A1.5 1.5 0 016.496 8zm4.996 0a1.5 1.5 0 011.5-1.5h.01a1.5 1.5 0 010 3h-.01a1.5 1.5 0 01-1.5-1.5z"></path></svg>
+
+  
+  
+</button>    <div class="dropdown-menu" aria-labelledby="commentDropdownMenuButton_1311606">
+      <div class="dropdown-item-group">
+        
+        <a class="dropdown-item text-warning" data-controller="ajax-modal" data-action="click-&gt;ajax-modal#showModal ajax:success-&gt;ajax-modal#renderModal" data-ajax-modal-target="#report_comment_1311606" data-remote="true" href="/products/comments/1311606/confirm_report">Signaler le commentaire...</a>
+      </div>
+    </div>
+  </div>
+<span>
+
+  </div>
+</div>
+
+  </turbo-frame>
+
+  <div class="border-left pl-6">
+    <div id="replies_comment_1311606">
+      
+    </div>
+
+      <turbo-frame id="new_comment_comment_1311606">
+      </turbo-frame>
+  </div>
+</div>
+
+
+  </turbo-frame>
+
+    <turbo-frame id="top_level_reply_button">
+      <a href="/products/comments/new?commentable_sgid=BAh7CEkiCGdpZAY6BkVUSSIjZ2lkOi8vcG9kaWEvVmlkZW9CbG9jay8zODA2MzkyBjsAVEkiDHB1cnBvc2UGOwBUSSIMZGVmYXVsdAY7AFRJIg9leHBpcmVzX2F0BjsAVEkiHTIwMjMtMDgtMjBUMDk6MDk6MzcuODE3WgY7AFQ%3D--7d5512d230199c68c2bdbe8e1aa1613ea8da21b0" data-turbo-frame="new_comment_video_block_3806392" data-podia--comments--comment--form-component-target="topLevelReplyBtn" class="btn btn-sm btn-outline-grey btn-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M8.00001 2.875C4.48628 2.875 1.87501 5.29144 1.87501 7.99998C1.87501 8.97755 2.20347 9.89871 2.78849 10.6896C2.96707 10.9311 3.00936 11.2472 2.90052 11.5271L2.38962 12.8408L4.52487 12.429C4.70354 12.3946 4.88852 12.4167 5.05404 12.4923C5.97258 12.9117 6.97829 13.1283 7.99714 13.125L8.00001 13.125C11.5137 13.125 14.125 10.7085 14.125 7.99998C14.125 5.29144 11.5137 2.875 8.00001 2.875ZM0.125012 7.99998C0.125012 4.08154 3.78263 1.125 8.00001 1.125C12.2174 1.125 15.875 4.08154 15.875 7.99998C15.875 11.918 12.2182 14.8743 8.00145 14.875C6.82796 14.8786 5.66655 14.6483 4.58956 14.1988L1.16571 14.8591C0.852947 14.9194 0.532113 14.805 0.328083 14.5604C0.124053 14.3158 0.0690599 13.9797 0.184508 13.6828L1.10237 11.3226C0.483786 10.3439 0.125012 9.21127 0.125012 7.99998Z"></path></svg>
+
+  <span>Ajouter un commentaire</span>
+  
+</a>    </turbo-frame>
+
+    <turbo-frame id="new_comment_video_block_3806392" data-action="turbo:frame-load->podia--comments--comment--form-component#hideTopLevelReplyBtn">
+    </turbo-frame>
+</div>
+
+</div>
+
+
+      </div>
+    </div>
+</div>
+
+      <div data-fullscreen-target="footer">
+        <div id="page_footer" class="react-page-footer" style="" data-controller="editor--page-section">
+  <div data-react-class="creator_ui/section_adapters/Footer" data-react-props="{&quot;id&quot;:&quot;page-footer&quot;,&quot;layout&quot;:&quot;center&quot;,&quot;logo&quot;:&quot;https://d31ezp3r8jwmks.cloudfront.net/gq2xyib7j6d5q1w0qwu394tfpgcj&quot;,&quot;showBranding&quot;:true,&quot;branding&quot;:{&quot;preStrapline&quot;:&quot;propulsé par&quot;,&quot;strapline&quot;:&quot;Obtenez votre site web gratuit&quot;,&quot;url&quot;:&quot;https://www.podia.com?utm_medium=poweredby\u0026utm_source=course&quot;},&quot;privacy&quot;:{&quot;text&quot;:&quot;Politique de confidentialité&quot;,&quot;url&quot;:&quot;https://fromscratch.podia.com/privacy&quot;},&quot;terms&quot;:{&quot;text&quot;:&quot;Conditions Générales de Vente&quot;,&quot;url&quot;:&quot;https://fromscratch.podia.com/terms&quot;},&quot;links&quot;:{},&quot;theme&quot;:{&quot;name&quot;:&quot;custom&quot;,&quot;colors&quot;:{&quot;background&quot;:&quot;#181717&quot;,&quot;button&quot;:&quot;#aaffff&quot;,&quot;buttonText&quot;:&quot;#0e0e0e&quot;,&quot;heading&quot;:&quot;#f5f5f5&quot;,&quot;text&quot;:&quot;#f3f3f3&quot;},&quot;background&quot;:{&quot;blend&quot;:&quot;normal&quot;,&quot;blur&quot;:0,&quot;contrast&quot;:75,&quot;grayscale&quot;:100,&quot;opacity&quot;:38,&quot;url&quot;:null},&quot;fonts&quot;:{&quot;families&quot;:[&quot;Avenir-Next:700&quot;,&quot;Avenir-Next:400&quot;],&quot;styles&quot;:{&quot;preheadingFont&quot;:{&quot;family&quot;:&quot;Avenir-Next&quot;,&quot;weight&quot;:&quot;700&quot;,&quot;spacing&quot;:&quot;-0.02&quot;,&quot;height&quot;:&quot;1&quot;,&quot;case&quot;:&quot;none&quot;},&quot;headingFont&quot;:{&quot;family&quot;:&quot;Avenir-Next&quot;,&quot;weight&quot;:&quot;700&quot;,&quot;spacing&quot;:&quot;-0.01&quot;,&quot;height&quot;:&quot;1.45&quot;,&quot;case&quot;:&quot;none&quot;},&quot;subheadingFont&quot;:{&quot;family&quot;:&quot;Avenir-Next&quot;,&quot;weight&quot;:&quot;700&quot;,&quot;spacing&quot;:&quot;-0.03&quot;,&quot;height&quot;:&quot;1&quot;,&quot;case&quot;:&quot;none&quot;},&quot;bodyFont&quot;:{&quot;family&quot;:&quot;Avenir-Next&quot;,&quot;weight&quot;:&quot;400&quot;,&quot;spacing&quot;:&quot;0&quot;,&quot;height&quot;:&quot;1.8&quot;,&quot;case&quot;:null},&quot;buttonFont&quot;:{&quot;family&quot;:&quot;Avenir-Next&quot;,&quot;weight&quot;:&quot;400&quot;,&quot;spacing&quot;:&quot;0.03&quot;,&quot;height&quot;:&quot;2&quot;,&quot;case&quot;:&quot;none&quot;},&quot;navigationFont&quot;:{&quot;family&quot;:&quot;Avenir-Next&quot;,&quot;weight&quot;:&quot;400&quot;,&quot;spacing&quot;:&quot;0&quot;,&quot;height&quot;:&quot;1.8&quot;,&quot;case&quot;:&quot;none&quot;}},&quot;sizes&quot;:{&quot;headingFont&quot;:{&quot;h1&quot;:&quot;2.1&quot;,&quot;h2&quot;:&quot;1.6&quot;,&quot;h3&quot;:&quot;1.85&quot;},&quot;bodyFont&quot;:{&quot;md&quot;:&quot;1.1&quot;,&quot;sm&quot;:&quot;0.8&quot;},&quot;buttonFont&quot;:{&quot;md&quot;:&quot;1&quot;,&quot;sm&quot;:&quot;0.8&quot;},&quot;navigationFont&quot;:{&quot;md&quot;:0.8}},&quot;baseFontSize&quot;:&quot;20&quot;}},&quot;text&quot;:&quot;\u003cdiv\u003e© From Scratch 2023\u003c/div\u003e&quot;,&quot;social&quot;:{&quot;twitter&quot;:{&quot;position&quot;:0,&quot;name&quot;:&quot;twitter&quot;,&quot;url&quot;:null},&quot;facebook&quot;:{&quot;position&quot;:1,&quot;name&quot;:&quot;facebook&quot;,&quot;url&quot;:null},&quot;instagram&quot;:{&quot;position&quot;:2,&quot;name&quot;:&quot;instagram&quot;,&quot;url&quot;:null},&quot;pinterest&quot;:{&quot;position&quot;:3,&quot;name&quot;:&quot;pinterest&quot;,&quot;url&quot;:null},&quot;linkedin&quot;:{&quot;position&quot;:4,&quot;name&quot;:&quot;linkedin&quot;,&quot;url&quot;:&quot;https://www.linkedin.com/in/julien-azambourg/&quot;},&quot;youtube&quot;:{&quot;position&quot;:5,&quot;name&quot;:&quot;youtube&quot;,&quot;url&quot;:&quot;https://www.youtube.com/channel/UCHGLV13U7YRbjrKpqfbtyYg/videos&quot;},&quot;tiktok&quot;:{&quot;position&quot;:6,&quot;name&quot;:&quot;tiktok&quot;,&quot;url&quot;:null},&quot;website&quot;:{&quot;position&quot;:7,&quot;name&quot;:&quot;website&quot;,&quot;url&quot;:null},&quot;mailto&quot;:{&quot;position&quot;:8,&quot;name&quot;:&quot;mailto&quot;,&quot;url&quot;:&quot;mailto:julien.azbrg@gmail.com&quot;}},&quot;emailForm&quot;:{&quot;emailValue&quot;:&quot;benoit.zel@gmail.com&quot;,&quot;nameValue&quot;:&quot;Benoit Zellal&quot;,&quot;recaptchaEnabled&quot;:true,&quot;recaptchaKey&quot;:&quot;6Lfu8lAUAAAAAP-DS-Qm7Q3RZlcjxVFbQW9oYpIX&quot;,&quot;emailPlaceholder&quot;:&quot;Email&quot;,&quot;namePlaceholder&quot;:&quot;Prénom&quot;,&quot;action&quot;:&quot;/email_lists/322278/subscriptions?page_section_id=footer&quot;,&quot;id&quot;:&quot;page-footer&quot;,&quot;title&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;buttonText&quot;:&quot;&quot;,&quot;withName&quot;:false},&quot;sidebarActive&quot;:true,&quot;aspectRatio&quot;:&quot;natural&quot;,&quot;mediaWidth&quot;:&quot;0.15&quot;,&quot;mediaCorners&quot;:&quot;hard&quot;,&quot;features&quot;:{}}" data-react-cache-id="creator_ui/section_adapters/Footer-0"></div>
+</div>
+      </div>
+
+    
+    <div>
+      <script>
+  window.Conversation = {
+    connectOnLoad: 'true',
+    creator: '{\"first_name\":\"Julien\",\"name\":\"Julien Azambourg\",\"imageUrl\":\"https://d31ezp3r8jwmks.cloudfront.net/suztlvcaakhfc83e6um66gfalj1v\",\"availability\":\"away\",\"messagingEnabled\":true}',
+    customDomain: 'false',
+    isVisitor: 'false',
+    messagingEnabled: 'true',
+    locales: '{\"email_capture\":{\"get_notified\":\"Reçois des réponses\",\"notify_new_messages\":\"Nous vous informerons de nouveaux messages.\",\"subscribed_message\":\"Vous êtes abonné aux futurs notifications de messages non lus.\",\"your_email\":\"votre e-mail\",\"you_got_mail\":\"Vous avez un email!\"}}'
+  }
+  window.clickToastEvent = document.createEvent('Event');
+  window.clickToastEvent.initEvent('podia.messagingToastClick', true, true);
+</script>
+
+<div class="messaging-chat">
+  <div id="messaging-container"></div>
+</div>
+
+    </div>
+  </div>
+</body>
+</html>
+
